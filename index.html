@@ -6,6 +6,14 @@
   <title>FIPER | Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CYBEJ76GC9');
+  </script>
 </head>
 <body>
 
@@ -14,15 +22,15 @@
       <div class="nav w-full h-36 bg-white flex justify-center items-center">
         <div class="nav--section bg-white h-4/5 w-4/5 rounded-full flex items-center justify-center drop-shadow-md">
           <div class="nav--logo w-1/6 h-4/5 flex items-center justify-center text-3xl font-bold text-blue-900">
-            LOGO
-          </div>
+          LOGO
+        </div>
           <div class="nav--menu w-4/6 h-4/5 flex justify-between items-center">
             <ul class="flex justify-center items-center w-full h-full gap-20 text-3xl font-semibold text-blue-900">
               <li> Home</li>
               <li> Feature</li>
               <li> Social Media</li>
-            </ul>
-          </div>
+          </ul>
+        </div>
           <div class="nav--action w-1/6 h-full flex items-center justify-end">
             <div class="nav--action--button h-4/5 w-40 rounded-full bg-yellow-400 mr-4"></div>
           </div>
@@ -46,7 +54,7 @@
             </div>
           </div>
         </div>
-        <div class="right w-2/4">
+      <div class="right w-2/4">
           <div class="grid grid-cols-2 grid-rows-2 gap-0 h-full w-full gap-2">
             <div class=" flex justify-end items-end">
               <div class="container--right-1 bg-yellow-400 w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center">
@@ -74,9 +82,38 @@
       </div>
       <!-- End Content -->
   </div>
+
   <div class="section-2 min-h-screen bg-gray-400"></div>
   <div class="section-3 min-h-screen bg-red-400"></div>
   <div class="section-4 min-h-screen bg-blue-400"></div>
   <div class="section-5 min-h-screen bg-yellow-400"></div>
 </body>
 </html>
+
+<!-- JavaScript -->
+<!-- JavaScript for toggle -->
+<!-- <script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileAction = document.getElementById('mobile-action');
+
+  let isOpen = false;
+
+  toggleButton.addEventListener('click', () => {
+    isOpen = !isOpen;
+
+    if (isOpen) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-[1000px]');
+
+      mobileAction.classList.remove('max-h-0');
+      mobileAction.classList.add('max-h-[1000px]');
+    } else {
+      mobileMenu.classList.remove('max-h-[1000px]');
+      mobileMenu.classList.add('max-h-0');
+
+      mobileAction.classList.remove('max-h-[1000px]');
+      mobileAction.classList.add('max-h-0');
+    }
+  });
+</script> -->
