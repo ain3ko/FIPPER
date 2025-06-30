@@ -1,119 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIPER | Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBEJ76GC9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-CYBEJ76GC9');
   </script>
-</head>
-<body>
 
-  <div class="section-1 h-screen">
-      <!-- Header -->
-      <div class="nav w-full h-36 bg-white flex justify-center items-center">
-        <div class="nav--section bg-white h-4/5 w-4/5 rounded-full flex items-center justify-center drop-shadow-md">
-          <div class="nav--logo w-1/6 h-4/5 flex items-center justify-center text-3xl font-bold text-blue-900">
-          LOGO
-        </div>
-          <div class="nav--menu w-4/6 h-4/5 flex justify-between items-center">
-            <ul class="flex justify-center items-center w-full h-full gap-20 text-3xl font-semibold text-blue-900">
-              <li> Home</li>
-              <li> Feature</li>
-              <li> Social Media</li>
+  <script src="main.js" defer></script>
+</head>
+
+<body class="overflow-x-hidden">
+
+  <div id="home" class="section-1 h-screen">
+    <div class="nav w-full h-36 bg-white flex justify-center items-center">
+      <div class="nav--section bg-white h-4/5 w-4/5 rounded-full flex items-center justify-center drop-shadow-md">
+        <div
+          class="nav--logo w-1/6 h-4/5 flex items-center justify-center text-3xl font-bold text-blue-900 anim-trigger anim-fade-in">
+          FIPER</div>
+        <div class="nav--menu w-4/6 h-4/5 flex justify-between items-center">
+          <ul class="flex justify-center items-center w-full h-full gap-20 text-3xl font-semibold text-blue-900">
+            <li class="anim-trigger anim-fade-in-up" data-delay="100ms"><a href="#home">Home</a></li>
+            <li class="anim-trigger anim-fade-in-up" data-delay="200ms"><a href="#features">Feature</a></li>
+            <li class="anim-trigger anim-fade-in-up" data-delay="300ms"><a href="#social-media">Social Media</a></li>
           </ul>
         </div>
-          <div class="nav--action w-1/6 h-full flex items-center justify-end">
-            <div class="nav--action--button h-4/5 w-40 rounded-full bg-yellow-400 mr-4"></div>
+        <div class="nav--action w-1/6 h-full flex items-center justify-end">
+          <div class="nav--action--button h-4/5 w-40 rounded-full bg-[#ffeb00] mr-4 anim-trigger anim-fade-in flex items-center justify-center text-2xl font-semi-bold"
+            data-delay="400ms">Sign In</div>
+        </div>
+      </div>
+    </div>
+    <div class="side flex min-h-[calc(100vh-144px)]">
+      <div class="left w-2/4 flex flex-col justify-center">
+        <div class="left--hook pl-40 font-bold text-8xl text-blue-900 anim-trigger anim-fade-in-up" data-delay="200ms">
+          PUSING <BR>
+          KELOLA <BR>
+          KEUANGAN?
+        </div>
+        <div class="left--content pl-40 flex items-top text-2xl w-full ml-1 mt-4 anim-trigger anim-fade-in-up"
+          data-delay="400ms">
+          Gunakan aplikasi kami dan nikmati kemudahannya!
+        </div>
+        <div class="left--CallToAction pl-40 anim-trigger anim-fade-in-up" data-delay="600ms">
+          <div class="button--CTA text-2xl font-semibold text-blue-900">
+            <button type="button" class="mt-12 h-16 w-48 rounded-2xl bg-[#ffeb00] drop-shadow-md"> Get Started!
+            </button>
           </div>
         </div>
       </div>
-      <!-- End Header -->
-       <!-- Content -->
-      <div class="side flex min-h-screen">
-        <div class="left w-2/4">
-          <div class="left--hook w-full h-3/6 flex items-end pb-8 pl-40 font-bold text-8xl text-blue-900">
-            PUSING <BR>
-            KELOLA <BR>
-            KEUANGAN?
-          </div>
-          <div class="left--content pl-40 flex items-top text-2xl w-full ml-1">
-            Gunakan aplikasi kami dan nikmati kemudahannya!
-          </div>
-          <div class="left--CallToAction">
-            <div class="button--CTA pl-40 text-2xl font-semibold text-blue-900">
-              <button type="button" class=" mt-12 bg-white h-16 w-48 rounded-2xl bg-yellow-400 drop-shadow-md"> Get Started! </button>
-            </div>
-          </div>
-        </div>
       <div class="right w-2/4">
-          <div class="grid grid-cols-2 grid-rows-2 gap-0 h-full w-full gap-2">
-            <div class=" flex justify-end items-end">
-              <div class="container--right-1 bg-yellow-400 w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center">
-                <div class="text--container--1">
-                  <p class="text-9xl font-bold mt-4">4.8</p>
-                  <p class="text-xl text-center mt-2 font-semibold">People Ratings</p>
-                </div>
+        <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full w-full">
+          <div class="flex justify-end items-end">
+            <div
+              class="container--right-1 bg-[#ffeb00] w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center anim-trigger anim-fade-in-up"
+              data-delay="300ms">
+              <div class="text--container--1">
+                <p class="text-9xl font-bold mt-4">4.8</p>
+                <p class="text-xl text-center mt-2 font-semibold">People Ratings</p>
               </div>
             </div>
-            <div class=" flex items-end">
-              <div class="container--right-2 bg-yellow-400 w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center">
-                <div class="text--container--1">
-                  <p class="text-9xl font-bold mt-4">1M</p>
-                  <p class="text-xl text-center mt-2 font-semibold">Download!</p>
-                </div>
+          </div>
+          <div class="flex items-end">
+            <div
+              class="container--right-2 bg-[#ffeb00] w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center anim-trigger anim-fade-in-up"
+              data-delay="500ms">
+              <div class="text--container--1">
+                <p class="text-9xl font-bold mt-4">1M</p>
+                <p class="text-xl text-center mt-2 font-semibold">Download!</p>
               </div>
             </div>
-            <div class="col-span-2 flex justify-center">
-              <div class="container--right-3 bg-yellow-400 w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center items-end">
-                <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/fiper-hold-phone.png" width="400" height="400">
-              </div>
+          </div>
+          <div class="col-span-2 flex justify-center">
+            <div
+              class="container--right-3 bg-[#577BC1] w-4/6 h-3/6 rounded-3xl drop-shadow-md flex justify-center items-end anim-trigger anim-fade-in-up"
+              data-delay="700ms">
+              <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/fiper-hold-phone.png"
+                width="350" height="350">
             </div>
           </div>
         </div>
       </div>
-      <!-- End Content -->
+    </div>
   </div>
 
-  <div class="section-2 min-h-screen bg-gray-400"></div>
-  <div class="section-3 min-h-screen bg-red-400"></div>
-  <div class="section-4 min-h-screen bg-blue-400"></div>
-  <div class="section-5 min-h-screen bg-yellow-400"></div>
+  <div id="features" class="section-2 h-screen bg-[#577BC1] py-16">
+    <div class="header-section-2 w-full h-2/6 flex items-center justify-center">
+      <p class="font-bold text-6xl mr-4 text-white anim-trigger anim-fade-in-up">KENAPA HARUS</p>
+      <p class="font-bold text-6xl text-[#ffeb00] mr-4 anim-trigger anim-fade-in-up" data-delay="200ms">FIPER</p>
+      <p class="font-bold text-6xl text-white anim-trigger anim-fade-in-up" data-delay="400ms">?</p>
+    </div>
+    <div class="content-section-2 w-full h-4/6 flex flex-col items-center justify-start mt-8">
+      <div class="grid grid-cols-3 grid-rows-1 gap-4 w-3/5 h-64 p-4 anim-trigger anim-fade-in-up" data-delay="200ms">
+        <div class="bg-white rounded-3xl shadow-md"></div>
+        <div class="col-span-2 bg-[#ffeb00] rounded-3xl shadow-md"></div>
+      </div>
+      <div class="grid grid-cols-3 grid-rows-1 gap-4 w-3/5 h-64 p-4 anim-trigger anim-fade-in-up" data-delay="400ms">
+        <div class="col-span-2 bg-[#ffeb00] rounded-3xl shadow-md"></div>
+        <div class="col-start-3 bg-white rounded-3xl shadow-md"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-3 h-screen w-full flex">
+    <div class="left-content-section-3 h-full w-3/6 flex items-center justify-center anim-trigger anim-fade-in-up">
+      <div class="flex flex-col h-full w-4/6 justify-center ">
+        <p class="text-blue-900 text-8xl font-bold mb-4">FIPER</p>
+        <p class="pl-2 text-lg">Fiper, aplikasi cerdas dengan fitur OCR untuk scan struk belanja otomatis, hadir
+          membantumu mengelola keuangan dengan mudah – nikmati diskon 30% untuk langganan pertama dan wujudkan kebebasan
+          finansialmu</p>
+        <div class="left--CallToAction">
+          <div class="button--CTA pl-2 text-2xl font-semibold text-white">
+            <button type="button" class="mt-12 bg-blue-900 h-16 w-48 rounded-2xl drop-shadow-md"> Get Started! </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-content-section-3 h-full w-3/6 flex justify-end items-center anim-trigger anim-fade-in"
+      data-delay="300ms">
+      <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/fiper-hand.png"
+        class="max-h-full">
+    </div>
+  </div>
+
+  <div class="section-4 h-screen bg-[#577BC1] py-16">
+    <div class="header h-2/6 flex flex-col items-center justify-end pb-10">
+      <div class="font-bold text-5xl flex m-2 anim-trigger anim-fade-in-up">
+        <p class="text-[#ffeb00]">100.000+</p>
+        <p class="text-white ml-3"> pengguna FIPER</p>
+      </div>
+      <div class="font-bold text-5xl text-white m-2 anim-trigger anim-fade-in-up" data-delay="200ms">udah lebih pinter
+        finansial</div>
+      <div class="mt-4 text-2xl text-[#ffeb00] anim-trigger anim-fade-in-up" data-delay="400ms">Lihat apa kata mereka!
+      </div>
+    </div>
+    <div class="main-content h-4/6 flex gap-16 justify-center items-center">
+      <div class="card h-5/6 w-96 bg-white rounded-3xl drop-shadow-md flex flex-col anim-trigger anim-fade-in-up hover:scale-105"
+        data-delay="200ms">
+        <div class="header h-2/6 flex">
+          <div class="profile w-2/6 flex items-center justify-end">
+            <div class="image h-16 w-16 rounded-full overflow-hidden">
+              <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/NapoleonBonaparte1.jpg"
+                alt="Foto profil" class="w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="name-profile w-4/6 flex items-center justify-top text-2xl font-semibold pl-4">
+            <p>Napoleon</p>
+          </div>
+        </div>
+        <div class="comment h-4/6 flex justify-center">
+          <p class="w-3/5 text-justify">Sebagai ibu rumah tangga, aku suka banget fitur kategorinya. Belanja dapur,
+            sekolah anak, sampai tagihan semua bisa dipantau. Gampang dipakai dan bikin hemat.</p>
+        </div>
+        <div class="ratings h-1/6 flex justify-center">
+          <div class="flex justify-center gap-2">
+            <i class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card h-5/6 w-96 bg-white rounded-3xl drop-shadow-md flex flex-col anim-trigger anim-fade-in-up hover:scale-105"
+        data-delay="400ms">
+        <div class="header h-2/6 flex">
+          <div class="profile w-2/6 flex items-center justify-end">
+            <div class="image h-16 w-16 rounded-full overflow-hidden">
+              <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/QinShiHuang19century.jpg"
+                alt="Foto profil" class="w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="name-profile w-4/6 flex items-center justify-top text-2xl font-semibold pl-4">
+            <p>Qin Shi Huang</p>
+          </div>
+        </div>
+        <div class="comment h-4/6 flex justify-center">
+          <p class="w-3/5 text-justify">Aplikasi ini ngebantu banget buat tahu pengeluaran harian. Nggak kerasa,
+            ternyata banyak bocor halus dari jajan kecil. Sejak pakai ini, keuangan lebih terkontrol.</p>
+        </div>
+        <div class="ratings h-1/6 flex justify-center items-start">
+          <div class="flex justify-center gap-2">
+            <i class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card h-5/6 w-96 bg-white rounded-3xl drop-shadow-md flex flex-col anim-trigger anim-fade-in-up hover:scale-105"
+        data-delay="600ms">
+        <div class="header h-2/6 flex">
+          <div class="profile w-2/6 flex items-center justify-end">
+            <div class="image h-16 w-16 rounded-full overflow-hidden">
+              <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/60c6b3724d177.jpeg"
+                alt="Foto profil" class="w-full h-full object-cover object-center">
+            </div>
+          </div>
+          <div class="name-profile w-4/6 flex items-center justify-top text-2xl font-semibold pl-4">
+            <p>Oda Nobunaga</p>
+          </div>
+        </div>
+        <div class="comment h-4/6 flex justify-center">
+          <p class="w-3/5 text-justify">Dulu sering bingung kok uang cepat habis. Setelah pakai aplikasi ini, aku bisa
+            pantau pengeluaran harian, bikin anggaran, bahkan setting target tabungan. Wajib banget buat yang pengin
+            hidup lebih teratur secara finansial !</p>
+        </div>
+        <div class="ratings h-1/6 flex justify-center items-start">
+          <div class="flex justify-center gap-2">
+            <i class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-amber-400"></i><i
+              class="fa-solid fa-star text-2xl text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="social-media" class="section-5 h-screen w-full">
+  <div class="flex items-center justify-center h-5/6 mt-12">
+    <div class="w-3/5 grid grid-cols-2 grid-rows-2 gap-4">
+      <div class="flex items-end justify-end anim-trigger anim-fade-in-up" data-delay="0ms">
+        <div
+          class="group bg-[#577BC1] hover:bg-white h-48 w-48 rounded-tl-3xl shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110">
+          <a href="#" aria-label="X (Twitter)">
+            <i
+              class="fa-brands fa-x-twitter fa-3x text-white group-hover:text-[#577BC1] transition-colors duration-300"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-end justify-start anim-trigger anim-fade-in-up" data-delay="200ms">
+        <div
+          class="group bg-[#577BC1] hover:bg-white h-64 w-64 rounded-tr-3xl shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110">
+          <a href="#" aria-label="Instagram">
+            <i
+              class="fa-brands fa-instagram fa-5x text-white group-hover:text-[#577BC1] transition-colors duration-300"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-start justify-end anim-trigger anim-fade-in-up" data-delay="400ms">
+        <div
+          class="group bg-[#577BC1] hover:bg-white h-56 w-56 rounded-bl-3xl shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook fa-4x text-white group-hover:text-[#577BC1] transition-colors duration-300"></i>
+          </a>
+        </div>
+      </div>
+      <div class="flex items-start justify-start anim-trigger anim-fade-in-up" data-delay="600ms">
+        <div
+          class="group bg-[#577BC1] hover:bg-white h-56 w-56 rounded-br-3xl shadow-lg flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-110">
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube fa-5x text-white group-hover:text-[#577BC1] transition-colors duration-300"></i>
+          </a>
+        </div>
+      </div>
+      </div>
+    <div class="w-2/5 flex flex-col items-center pr-40 text-[#29292F]">
+      <div class=" text-center anim-trigger anim-fade-in-up text-7xl font-bold" data-delay="0ms">KUNJUNGI </div>
+      <div class=" text-center anim-trigger anim-fade-in-up text-7xl font-bold" data-delay="200ms">SOSIAL MEDIA </div>
+      <div class=" text-center anim-trigger anim-fade-in-up text-7xl font-bold mb-4 text-blue-900" data-delay="200ms">KAMI</div>
+      <div class=" text-center anim-trigger anim-fade-in-up text-2xl font-semi-bold mb-4" data-delay="400ms"> atau</div>
+      <div class=" text-center anim-trigger anim-fade-in-up text-2xl font-semi-bold" data-delay="600ms">
+        <div class="text-center text-2xl md:text-3xl font-semibold text-gray-400" data-delay="600ms">
+          <span class="text-black">https://fipper.vercel.app/</span>
+          <span id="animated-text" class="text-blue-900"></span>
+          <span id="cursor" class="cursor-blink text-blue-900">|</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-[#29292F] h-1/6 flex justify-center">
+    <div class="h-full w-5/6 grid grid-cols-4 grid-rows-1 gap-4">
+      <div class="h-full w-full flex items-center justify-start">
+        <div class="w-24 h-24 bg-white rounded-2xl shadow-md overflow-hidden flex items-center justify-center">
+          <img src="https://raw.githubusercontent.com/ain3ko/FIPPER/refs/heads/main/image/logo-removebg-preview.png"
+            class="h-4/5 w-4/5">
+        </div>
+      </div>
+      <div class="ml-10 font-bold text-2xl text-[#FFD154] flex items-center justify-end"> <p>LAYANAN KAMI</p> <p class="rotate-90 ml-4">›</p></div>
+      <div class="ml-10 font-bold text-2xl text-[#FFD154] flex items-center justify-start"> <p>HUBUNGI KAMI</p><p class="rotate-90 ml-4">›</p></div>
+      <div class="ml-10 font-bold text-2xl text-[#FFD154] flex items-center justify-end"> BERLANGGANAN</div>
+    </div>
+  </div>
+  </div>
+  <div class="footer bg-[#29292F] w-full flex justify-center pt-4">
+    <div class="h-full w-5/6 grid grid-cols-4 grid-rows-1 gap-4">
+      <div class="flex flex-col items-end">
+        <div class="text-left text-white">
+          Aplikasi keuangan terbaik untuk membantu Anda mencapai tujuan finansial dengan mudah dan efektif.
+        </div>
+        <div class="w-full h-24 mt-8">
+          <div class="grid grid-cols-2 grid-rows-1 gap-2 h-20 w-full">
+            <div class="h-16 bg-[#393A3E] rounded-2xl flex w-full">
+              <div class="w-2/5 flex items-center justify-center">
+                <i class="fa-brands fa-apple text-white fa-2x"></i>
+              </div>
+              <div class="w-3/5 h-full flex flex-col items-center justify-center text-white text-sm pr-4">
+                <p>Download di</p>
+                <p class="font-bold">App Store</p>
+              </div>
+            </div>
+            <div class="h-16 bg-[#393A3E] rounded-2xl flex w-full">
+              <div class="w-2/5 flex items-center justify-center">
+                <i class="fa-brands fa-google-play text-white fa-2x"></i>
+              </div>
+              <div class="w-3/5 h-full flex flex-col items-center justify-center text-white text-sm pr-4">
+                <p>Download di</p>
+                <p class="font-bold">Play Store</p>
+              </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-start w-full mt-4">
+          <div class="font-bold text-[#FFD154] text-2xl">Tautan Penting</div>
+          <div class="text-[#A09C9C] mt-8"><a href="#">Tentang Kami</a></div>
+          <div class="text-[#A09C9C] mt-2"><a href="#">Blog</a></div>
+          <div class="text-[#A09C9C] mt-2"><a href="#">Kebijakan Privasi</a></div>
+          <div class="text-[#A09C9C] mt-2"><a href="#">Syarat & Ketentuan</a></div>
+        </div>
+
+        <div class="flex justify-start w-full">
+          <div class="grid grid-cols-4 grid-rows-1 h-32 w-3/4 mt-6">
+            <div class="flex items-center justify-start h-full w-full">
+              <div class="h-12 w-12 bg-white rounded-xl text-blue-900 flex items-center justify-center"><i
+                  class=" fa-brands fa-x-twitter ">
+                </i></div>
+            </div>
+            <div class="flex items-center justify-start h-full w-full">
+              <div class="h-12 w-12 bg-white rounded-xl text-blue-900 flex items-center justify-center"><i
+                  class=" fa-brands fa-facebook ">
+                </i></div>
+            </div>
+            <div class="flex items-center justify-start h-full w-full">
+              <div class="h-12 w-12 bg-white rounded-xl text-blue-900 flex items-center justify-center"><i
+                  class=" fa-brands fa-instagram ">
+                </i></div>
+            </div>
+            <div class="flex items-center justify-start h-full w-full">
+              <div class="h-12 w-12 bg-white rounded-xl text-blue-900 flex items-center justify-center"><i
+                  class=" fa-brands fa-youtube ">
+                </i></div>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-end justify-start">
+        <div class="text-[#A09C9C] "><p>Manajemen Keuangan</p></div>
+        <div class="text-[#A09C9C] mt-4"><p>Perancangan Anggaran</p></div>
+        <div class="text-[#A09C9C] mt-4"><p>Investasi</p></div>
+        <div class="text-[#A09C9C] mt-4"><p>Pembayaran Tagihan</p></div>
+        <div class="text-[#A09C9C] mt-4"><p>Konsultan Keuangan</p></div>
+      </div>
+      <div class="flex flex-col  ml-10 items-start justify-start">
+        <div class="text-[#A09C9C] ">
+          <p>Jl.Suka Mundur No. 88, Bandung
+          Kuningan, Indonesia</p>
+        </div>
+        <div class="text-[#A09C9C] mt-4">
+          <p>Info@fiper.com</p>
+        </div>
+        <div class="text-[#A09C9C] mt-4">
+          <p>+62 182 8806 9904</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-full">
+        <div class="w-full text-white text-right">
+          <p>Dapatkan tips keuangan terbaru
+            dan promo menarik</p>
+        </div>
+        <div class="w-full text-white text-right mt-8">
+          <div class="bg-gray-800 rounded-lg shadow-md flex items-center">
+            <input type="email" class="bg-white rounded-l-md py-2 px-4 w-full focus:outline-none" placeholder="Email anda">
+            <button
+              class="bg-amber-400 text-gray-800 py-2 px-4 rounded-r-md focus:outline-none hover:bg-amber-500 transition-colors duration-200">
+              <i class="fa-solid fa-paper-plane "></i>
+            </button>
+          </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="w-full h-24 bg-[#29292F] pt-8">
+    <div class="flex items-end">
+      <div class="w-full h-px bg-white mb-4"></div>
+    </div>
+    <div class="w-full">
+      <div class=" flex items-start justify-center mb-4 text-white"><p>© 2025 FIPER. Seluruh hak cipta dilindungi.</p></div>
+    </div>
+  </div>
 </body>
+
 </html>
-
-<!-- JavaScript -->
-<!-- JavaScript for toggle -->
-<!-- <script>
-  const toggleButton = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileAction = document.getElementById('mobile-action');
-
-  let isOpen = false;
-
-  toggleButton.addEventListener('click', () => {
-    isOpen = !isOpen;
-
-    if (isOpen) {
-      mobileMenu.classList.remove('max-h-0');
-      mobileMenu.classList.add('max-h-[1000px]');
-
-      mobileAction.classList.remove('max-h-0');
-      mobileAction.classList.add('max-h-[1000px]');
-    } else {
-      mobileMenu.classList.remove('max-h-[1000px]');
-      mobileMenu.classList.add('max-h-0');
-
-      mobileAction.classList.remove('max-h-[1000px]');
-      mobileAction.classList.add('max-h-0');
-    }
-  });
-</script> -->

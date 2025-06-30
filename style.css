@@ -1,0 +1,45 @@
+/* File: css/style.css */
+
+/* Membuat semua scrolling menjadi halus */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style untuk link navbar yang sedang aktif */
+.nav--menu a.active-link {
+  color: #ffeb00;
+
+}
+
+/* Menambahkan transisi agar perubahan warna tidak kaku */
+.nav--menu a {
+  transition: color 0.3s ease-in-out;
+}
+
+/* Keadaan awal untuk semua elemen animasi */
+.anim-fade-in,
+.anim-fade-in-up {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.anim-fade-in-up {
+  transform: translateY(30px);
+}
+
+/* Keadaan akhir saat kelas .is-visible ditambahkan oleh JS */
+.anim-fade-in.is-visible,
+.anim-fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
